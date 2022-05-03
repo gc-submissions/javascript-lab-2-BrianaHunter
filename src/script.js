@@ -11,8 +11,20 @@
 
     const chooseOption = (opt1, opt2) => {
         let randNum = Math.random() * 1;
+        if (randNum < 0.5) {
+            randNum = 0;
+        } else {
+            randNum = 1
+        }
         return randNum === 0
         ? opt1
         : opt2;
     };
     console.log(chooseOption('opt1', 'opt2'));
+
+    function attackPlayer (health) {
+        let number = 0
+        number = health - randomDamage();
+        return number
+    }
+    console.log(attackPlayer(10));
