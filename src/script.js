@@ -55,3 +55,28 @@
      return health <= 0 ? true : false
  }
  console.log(isDead(-4))
+
+ function fight (player1, player2, player1Health, player2Health) {
+     while (true) {
+        let attacker = chooseOption(player1, player2); 
+
+        if (attacker === player1) {
+            player2Health = attackPlayer(player2Health);
+            logHealth(player2, player2Health)
+            if (isDead(player2Health)) {
+                logDeath(player1, player2);
+                break;
+            }
+        }
+        else {
+            player1Health = attackPlayer(player1Health)
+            logHealth(player1, player1Health)
+            if (isDead(player2, player1)) {
+                logDeath(player2, player1)
+                break;
+        } 
+     }
+     
+ }
+}
+ fight('Briana', 'Auriel', 100, 100)
