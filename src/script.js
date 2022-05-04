@@ -48,3 +48,10 @@
      console.log(`${winner} defeated: ${loser}`);
  }
  logDeath('Briana', 'Auriel')
+
+ // Declare an arrow function named isDead that has one parameter named health which returns a boolean value of true or false based on the following condition: health <= 0;
+
+ const isDead = (health) => {
+     return health <= 0 ? true : false
+ }
+ console.log(isDead(-4))
