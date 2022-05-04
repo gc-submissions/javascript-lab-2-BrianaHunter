@@ -35,10 +35,16 @@
     }
     console.log(attackPlayer(10));
 
-    // Declare an arrow function named logHealth that has two parameters named player and health which has a console.log method to state the following message: “player health: health”.
+// Declare an arrow function named logHealth that has two parameters named player and health which has a console.log method to state the following message: “player health: health”.
 
     const logHealth = (player, health) => {
         console.log(`${player} health: ${health}`);
     }
     logHealth('Briana', 100)
-    
+
+ // Declare an arrow function named logDeath that has two parameters named winner and loser which has a console.log method to state the following message: “winner defeated loser”
+
+ const logDeath = (winner, loser) => {
+     console.log(`${winner} defeated: ${loser}`);
+ }
+ logDeath('Briana', 'Auriel')
